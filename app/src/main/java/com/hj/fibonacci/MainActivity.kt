@@ -32,12 +32,12 @@ class MainActivity : AppCompatActivity() {
         var result: ULong = 0u
         var f1 = 0u
         var f2 = 1u
-        if (range!! <= 0) {
+        if (range!! <= 1) {
             return f1.toULong()
-        } else if (range == 1) {
+        } else if (range == 2) {
             return f2.toULong()
-        } else if (range!! > 1) {
-            for (i in 1..range!!) {
+        } else {
+            for (i in 2..range!!) {
                 result = (f1 + f2).toULong()
                 f1 = f2
                 f2 = result.toUInt()
@@ -45,17 +45,16 @@ class MainActivity : AppCompatActivity() {
         }
         return result
     }
-        private fun solB(): ULong {
+        private fun solB(n: Int): ULong {
             var result: ULong = 0u
-            fun rec(n: Int): Int {
                 if (n <= 0)
-                    return 0
+                    return 0u
                 else if (n == 1 || n == 2)
-                    return 1
+                    return 1u
                 else
-                    return rec(n - 2) + rec(n - 1)
-            }
-            return result
+                    return solB(n - 2) + solB(n - 1)
+
+
         }
 
 
@@ -88,7 +87,7 @@ class MainActivity : AppCompatActivity() {
 
                             view.btnSolB -> {
                                 selectedType = "Solution B"
-                                result = solB()
+                                result = solB(range!!)
                             }
 
                             view.btnSolC -> {

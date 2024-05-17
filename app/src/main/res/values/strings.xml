@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Fibonacci</string>
-    <string name="app_name">Month_01</string>
     <string name="TXT_RANGE">범위(0~93)</string>
     <string name="TXT_TITLE">Fibonacci</string>
     <string name="TXT_SOLUTION_A">Solution A</string>

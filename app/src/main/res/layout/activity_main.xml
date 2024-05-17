@@ -4,7 +4,7 @@
     <data>
         <variable
             name="view"
-            type="com.cj.android_class.month_01.MainActivity" />
+            type="com.hj.fibonacci.MainActivity" />
     </data>
 
     <LinearLayout
